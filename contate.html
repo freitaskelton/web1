@@ -4,104 +4,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contate-nos - Yachiru</title>
+    <title>🌸 Contate-nos | Yachiru</title>
 </head>
 
 <body>
 
-    <header>
-        <h1>🌸 Contate a Yachiru!</h1>
-        <p>Tem alguma coisa para falar? Pode mandar!</p>
-    </header>
+<header>
+    <h1>🌸 Contate a Yachiru!</h1>
+    <p>Quer falar com a 11ª Divisão?</p>
+</header>
 
-    <nav>
-        <a href="index.html">🏠 Início</a> |
-        <a href="cadastro.html">📝 Cadastro</a> |
-        <a href="producao.html">⚙️ Produção</a> |
-        <a href="servicos.html">🛠️ Serviços</a> |
-        <a href="pesquisas.html">🔎 Pesquisas</a> |
-        <a href="portfolio.html">📋 Portfólio</a> |
-        <a href="produtos.html">🛒 Produtos</a> |
-        <a href="parceiros.html">🤝 Parceiros</a> |
-        <a href="contate.html">🌸 Contate-nos</a> |
-        <a href="ouvidoria.html">📢 Ouvidoria</a> |
-        <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
-    </nav>
+<nav>
+    <a href="index.html">🏠 Início</a> |
+    <a href="cadastro.html">📝 Cadastro</a> |
+    <a href="producao.html">⚙️ Produção</a> |
+    <a href="servicos.html">🛠️ Serviços</a> |
+    <a href="pesquisas.html">🔎 Pesquisas</a> |
+    <a href="portfolio.html">📋 Portfólio</a> |
+    <a href="produtos.html">🛒 Produtos</a> |
+    <a href="parceiros.html">🤝 Parceiros</a> |
+    <a href="contate.html">🌸 Contate-nos</a> |
+    <a href="ouvidoria.html">📢 Ouvidoria</a> |
+    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+</nav>
 
-    <hr>
+<hr>
 
-    <main>
+<main>
 
-        <section>
-            <h2>🌸 Oii! É a Yachiru!</h2>
+<section>
 
-            <p>
-                Hehehe! Se você quer falar comigo ou com o
-                pessoal da 11ª Divisão, preenche o formulário!
-            </p>
-        </section>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
 
-        <section>
-            <h2>📨 Entre em contato</h2>
+<figure>
 
-            <form>
+<img src="yachiru.jpeg"
+     alt="Yachiru Kusajishi"
+     width="300">
 
-                <label for="nome">Seu nome:</label><br>
-                <input type="text" id="nome" name="nome" required>
+<figcaption>
+🌸 Yachiru Kusajishi
+</figcaption>
 
-                <br><br>
+</figure>
 
-                <label for="email">Seu e-mail:</label><br>
-                <input type="email" id="email" name="email" required>
+<article>
 
-                <br><br>
+<h2>🌸 Oii! É a Yachiru!</h2>
 
-                <label for="assunto">Assunto:</label><br>
+<p>
+Hehehe! Você chegou na minha página!
+</p>
 
-                <select id="assunto" name="assunto">
-                    <option>Dúvida</option>
-                    <option>Sugestão</option>
-                    <option>Elogio</option>
-                    <option>Problema</option>
-                    <option>Outro</option>
-                </select>
+<p>
+Se quiser falar comigo, mandar uma dúvida,
+uma sugestão ou simplesmente dizer oi,
+pode preencher o formulário!
+</p>
 
-                <br><br>
+<p>
+Mas escreve direitinho, tá?
+O Ken-chan também pode acabar lendo! 😆
+</p>
 
-                <label for="mensagem">Mensagem:</label><br>
+</article>
 
-                <textarea id="mensagem" name="mensagem"
-                    rows="7" cols="50"
-                    placeholder="Escreva sua mensagem..."
-                    required></textarea>
+</div>
 
-                <br><br>
+</section>
 
-                <input type="submit" value="🌸 Enviar mensagem">
-                <input type="reset" value="Limpar">
+<hr>
 
-            </form>
-        </section>
+<section>
 
-        <aside>
-            <h2>⚔️ Recado do Ken-chan</h2>
+<h2>📨 Envie uma mensagem</h2>
 
-            <p>
-                "Se tiver alguma coisa para falar,
-                fala logo."
-            </p>
-        </aside>
+<form>
 
-        <br>
+<fieldset>
 
-        <a href="index.html">🏠 Voltar para o início</a>
+<legend>👤 Seus dados</legend>
 
-    </main>
+<label for="nome">Seu nome:</label><br>
+<input type="text" id="nome" name="nome" required>
 
-    <footer>
-        <hr>
-        <p>© 2026 - Projeto Zaraki Kenpachi</p>
-    </footer>
+<br><br>
+
+<label for="email">Seu e-mail:</label><br>
+<input type="email" id="email" name="email" required>
+
+</fieldset>
+
+<br>
+
+<fieldset>
+
+<legend>💬 Sua mensagem</legend>
+
+<label for="assunto">Assunto:</label><br>
+
+<select id="assunto" name="assunto">
+
+<option>Dúvida</option>
+<option>Sugestão</option>
+<option>Elogio</option>
+<option>Problema</option>
+<option>Outro</option>
+
+</select>
+
+<br><br>
+
+<label for="mensagem">Mensagem:</label><br>
+
+<textarea id="mensagem"
+          name="mensagem"
+          rows="8"
+          cols="50"
+          placeholder="Escreva aqui..."
+          required></textarea>
+
+</fieldset>
+
+<br>
+
+<input type="submit" value="🌸 Enviar mensagem">
+<input type="reset" value="🗑️ Limpar">
+
+</form>
+
+</section>
+
+<aside>
+
+<h2>⚔️ Ken-chan também está aqui!</h2>
+
+<p>
+"Se tiver alguma coisa para falar,
+fala logo."
+</p>
+
+</aside>
+
+<br>
+
+<a href="index.html">🏠 Voltar para o início</a>
+
+</main>
+
+<footer>
+<hr>
+<p>© 2026 - Projeto Zaraki Kenpachi</p>
+</footer>
 
 </body>
 </html>
