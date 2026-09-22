@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🛒 Produtos | 11ª Divisão</title>
+    <title>Produtos | 11ª Divisão</title>
 </head>
 
 <body>
 
 <header>
-    <h1>🛒 Loja da 11ª Divisão</h1>
-    <p>Produtos especiais para fãs do Ken-chan!</p>
+    <h1>🛒 Produtos da 11ª Divisão</h1>
+    <p>Produtos temáticos de Zaraki e Bleach</p>
 </header>
 
 <nav>
@@ -33,185 +33,123 @@
 <main>
 
 <section>
-
-<h2>🌸 Yachiru diz:</h2>
-
-<p>
-"Oii! Bem-vindo à lojinha!
-Escolhe alguma coisa legal para levar!" 😆
-</p>
-
-</section>
-
-<section>
-
-<h2>📦 Catálogo de produtos</h2>
+<h2>🛒 Catálogo</h2>
 
 <table border="1">
 
-<thead>
-
 <tr>
-<th>Produto</th>
-<th>Descrição</th>
-<th>Preço</th>
-<th>Disponibilidade</th>
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-<td>Moletom do Zaraki</td>
-<td>Moletom inspirado no capitão da 11ª Divisão.</td>
-<td>R$ 129,90</td>
-<td>Disponível</td>
+    <th>Produto</th>
+    <th>Descrição</th>
+    <th>Preço</th>
 </tr>
 
 <tr>
-<td>Moletom da Yachiru</td>
-<td>Moletom inspirado na pequena tenente.</td>
-<td>R$ 119,90</td>
-<td>Disponível</td>
+    <td>Moletom do Zaraki</td>
+    <td>Moletom inspirado no capitão da 11ª Divisão.</td>
+    <td>R$ 129,90</td>
 </tr>
 
 <tr>
-<td>Espada do Zaraki</td>
-<td>Réplica decorativa inspirada na Nozarashi.</td>
-<td>R$ 199,90</td>
-<td>Disponível</td>
+    <td>Moletom da Yachiru</td>
+    <td>Produto inspirado na tenente da 11ª Divisão.</td>
+    <td>R$ 119,90</td>
 </tr>
 
 <tr>
-<td>Camiseta da 11ª Divisão</td>
-<td>Camiseta temática.</td>
-<td>R$ 69,90</td>
-<td>Disponível</td>
+    <td>Espada do Zaraki</td>
+    <td>Réplica temática inspirada em Nozarashi.</td>
+    <td>R$ 199,90</td>
 </tr>
 
 <tr>
-<td>Caneca do Ken-chan</td>
-<td>Caneca temática.</td>
-<td>R$ 39,90</td>
-<td>Disponível</td>
+    <td>Camiseta da 11ª Divisão</td>
+    <td>Camiseta temática da divisão.</td>
+    <td>R$ 69,90</td>
 </tr>
 
-</tbody>
+<tr>
+    <td>Caneca do Ken-chan</td>
+    <td>Caneca temática de Zaraki.</td>
+    <td>R$ 39,90</td>
+</tr>
+
+<tr>
+    <td>Poster da 11ª Divisão</td>
+    <td>Poster decorativo temático.</td>
+    <td>R$ 29,90</td>
+</tr>
 
 </table>
-
 </section>
 
 <hr>
 
 <section>
+<h2>🌸 Yachiru atende a loja</h2>
 
-<h2>📝 Formulário de compra</h2>
+<p>
+    Hehehe! Bem-vindo à nossa loja!
+    Temos várias coisas legais do Ken-chan!
+</p>
+
+<p>
+    Escolha seu produto e preencha o formulário.
+</p>
+</section>
+
+<hr>
 
 <form>
 
 <fieldset>
 
-<legend>Dados do cliente</legend>
+<legend>🛒 Formulário de compra</legend>
 
+<p>
 <label for="nome">Nome:</label><br>
 <input type="text" id="nome" name="nome" required>
+</p>
 
-<br><br>
-
+<p>
 <label for="email">E-mail:</label><br>
 <input type="email" id="email" name="email" required>
+</p>
 
-<br><br>
+<p>
+<label for="produto">Produto:</label><br>
 
-<label for="telefone">Telefone:</label><br>
-<input type="tel" id="telefone" name="telefone">
+<select id="produto" name="produto">
 
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend>Produto</legend>
-
-<label for="produto">Escolha o produto:</label><br>
-
-<select id="produto" name="produto" required>
-
-<option value="">-- Escolha --</option>
 <option>Moletom do Zaraki</option>
 <option>Moletom da Yachiru</option>
 <option>Espada do Zaraki</option>
 <option>Camiseta da 11ª Divisão</option>
 <option>Caneca do Ken-chan</option>
+<option>Poster da 11ª Divisão</option>
 
 </select>
-
-<br><br>
-
-<label for="quantidade">Quantidade:</label><br>
-
-<input type="number"
-       id="quantidade"
-       name="quantidade"
-       min="1"
-       max="10"
-       value="1">
-
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend>Entrega</legend>
-
-<label for="endereco">Endereço:</label><br>
-
-<input type="text"
-       id="endereco"
-       name="endereco"
-       required>
-
-<br><br>
-
-<label for="observacao">Observação:</label><br>
-
-<textarea id="observacao"
-          name="observacao"
-          rows="5"
-          cols="45"></textarea>
-
-</fieldset>
-
-<br>
-
-<input type="submit" value="🛒 Finalizar compra">
-<input type="reset" value="Limpar">
-
-</form>
-
-</section>
-
-<aside>
-
-<p>
-🌸 Yachiru: "Hehehe! Obrigada pela compra!"
 </p>
 
-</aside>
+<p>
+<label for="quantidade">Quantidade:</label><br>
+<input type="number" id="quantidade" name="quantidade" min="1">
+</p>
 
-<br>
+<p>
+<label for="endereco">Endereço:</label><br>
+<textarea id="endereco" name="endereco" rows="5" cols="40"></textarea>
+</p>
 
-<a href="index.html">🏠 Voltar para o início</a>
+<input type="submit" value="🛒 Finalizar pedido">
+
+</fieldset>
+
+</form>
 
 </main>
 
 <footer>
-<hr>
-<p>© 2026 - Projeto educacional Zaraki Kenpachi</p>
+<p><a href="index.html">🏠 Voltar para o início</a></p>
 </footer>
 
 </body>

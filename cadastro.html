@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>📝 Cadastro | Zaraki Kenpachi</title>
+    <title>Cadastro | 11ª Divisão</title>
 </head>
 
 <body>
 
 <header>
     <h1>📝 Cadastro da 11ª Divisão</h1>
-    <p>Cadastre-se e faça parte da nossa comunidade!</p>
+    <p>Registre-se como fã de Zaraki Kenpachi!</p>
 </header>
 
 <nav>
@@ -33,164 +33,112 @@
 <main>
 
 <section>
+    <h2>🌸 Cadastro</h2>
 
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+    <p>
+        Hehehe! Quer entrar para o nosso grupo?
+        Então preencha o cadastro!
+    </p>
 
-        <figure>
-            <img src="imagens/zarakiyachiru.png"
-                 alt="Zaraki Kenpachi e Yachiru"
-                 width="300">
-
-            <figcaption>
-                ⚔️ Zaraki e Yachiru
-            </figcaption>
-        </figure>
-
-        <article>
-            <h2>🌸 Yachiru diz:</h2>
-
-            <p>
-                Oii! Quer fazer parte da nossa turma?
-                Então preenche o formulário!
-            </p>
-
-            <p>
-                E não esquece de colocar tudo direitinho,
-                porque o Ken-chan vai ficar de olho! Hehehe! 😆
-            </p>
-        </article>
-
-    </div>
-
+    <figure>
+        <img src="imagens/zarakiyachiru.png"
+             alt="Zaraki Kenpachi e Yachiru"
+             width="400">
+        <figcaption>Zaraki e Yachiru — 11ª Divisão</figcaption>
+    </figure>
 </section>
 
 <hr>
 
-<section>
-
-<h2>👤 Formulário de Cadastro</h2>
-
 <form>
 
-<fieldset>
+    <fieldset>
+        <legend>👤 Informações pessoais</legend>
 
-<legend>Informações pessoais</legend>
+        <p>
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" required>
+        </p>
 
-<label for="nome">Nome completo:</label><br>
-<input type="text" id="nome" name="nome" required>
+        <p>
+            <label for="idade">Idade:</label><br>
+            <input type="number" id="idade" name="idade">
+        </p>
 
-<br><br>
+        <p>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="email">
+        </p>
 
-<label for="idade">Idade:</label><br>
-<input type="number" id="idade" name="idade" min="1" required>
+        <p>
+            <label for="nascimento">Data de nascimento:</label><br>
+            <input type="date" id="nascimento" name="nascimento">
+        </p>
 
-<br><br>
+    </fieldset>
 
-<label for="email">E-mail:</label><br>
-<input type="email" id="email" name="email" required>
+    <fieldset>
+        <legend>⚔️ Preferências</legend>
 
-<br><br>
+        <p>
+            <label for="personagem">Personagem favorito:</label><br>
 
-<label for="nascimento">Data de nascimento:</label><br>
-<input type="date" id="nascimento" name="nascimento">
+            <select id="personagem" name="personagem">
+                <option value="zaraki">Zaraki Kenpachi</option>
+                <option value="yachiru">Yachiru</option>
+                <option value="ichigo">Ichigo Kurosaki</option>
+                <option value="rukia">Rukia Kuchiki</option>
+                <option value="byakuya">Byakuya Kuchiki</option>
+                <option value="outro">Outro</option>
+            </select>
+        </p>
 
-</fieldset>
+        <p>
+            Você gosta do Zaraki?
+        </p>
 
-<br>
+        <input type="radio" id="sim" name="zaraki" value="sim">
+        <label for="sim">Sim!</label>
 
-<fieldset>
+        <input type="radio" id="muito" name="zaraki" value="muito">
+        <label for="muito">Muito!</label>
 
-<legend>Perfil de fã</legend>
+        <input type="radio" id="nao" name="zaraki" value="nao">
+        <label for="nao">Ainda não conheço.</label>
 
-<label for="personagem">Personagem favorito:</label><br>
-<input type="text" id="personagem" name="personagem">
+        <p>
+            <label for="gosto">O que você mais gosta em Bleach?</label><br>
 
-<br><br>
+            <textarea id="gosto"
+                      name="gosto"
+                      rows="6"
+                      cols="50"></textarea>
+        </p>
 
-<label for="divisao">Divisão favorita:</label><br>
+    </fieldset>
 
-<select id="divisao" name="divisao">
-
-<option value="">Escolha uma divisão</option>
-<option>1ª Divisão</option>
-<option>4ª Divisão</option>
-<option>6ª Divisão</option>
-<option>10ª Divisão</option>
-<option>11ª Divisão</option>
-<option>12ª Divisão</option>
-<option>13ª Divisão</option>
-
-</select>
-
-<br><br>
-
-<p>Você gosta do Zaraki?</p>
-
-<input type="radio" id="sim" name="gosta" value="sim">
-<label for="sim">Sim!</label>
-
-<br>
-
-<input type="radio" id="muito" name="gosta" value="muito">
-<label for="muito">Muito!</label>
-
-<br>
-
-<input type="radio" id="nao" name="gosta" value="nao">
-<label for="nao">Não</label>
-
-</fieldset>
-
-<br>
-
-<fieldset>
-
-<legend>💬 Conte-nos</legend>
-
-<label for="motivo">
-Por que você gosta do Zaraki?
-</label>
-
-<br>
-
-<textarea id="motivo"
-          name="motivo"
-          rows="7"
-          cols="50"
-          placeholder="Escreva aqui..."
-          required></textarea>
-
-</fieldset>
-
-<br>
-
-<input type="submit" value="🌸 Enviar cadastro">
-<input type="reset" value="🗑️ Limpar">
+    <p>
+        <input type="submit" value="⚔️ Enviar Cadastro">
+        <input type="reset" value="Limpar">
+    </p>
 
 </form>
 
-</section>
+<hr>
 
 <aside>
+    <h2>🌸 Yachiru diz:</h2>
 
-<h2>⚔️ Zaraki diz:</h2>
-
-<p>
-"Se você realmente gosta de batalhas,
-então talvez tenha escolhido a divisão certa."
-</p>
-
+    <p>
+        Hehehe! Prontinho! Agora você já pode fazer parte
+        do nosso grupo de fãs!
+    </p>
 </aside>
-
-<br>
-
-<a href="index.html">🏠 Voltar para o início</a>
 
 </main>
 
 <footer>
-<hr>
-<p>© 2026 - Projeto Zaraki Kenpachi</p>
+    <p><a href="index.html">🏠 Voltar para o início</a></p>
 </footer>
 
 </body>
