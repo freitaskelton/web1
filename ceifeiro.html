@@ -1,164 +1,91 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seja um Ceifeiro | 11ª Divisão</title>
+    <title>Seja um Ceifeiro - Bleach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>⚔️ SEJA UM CEIFEIRO</h1>
-    <p>Você tem coragem para entrar na 11ª Divisão?</p>
+    <h1>⚔️ Seja um Ceifeiro</h1>
+    <p>Mostre sua coragem e entre para o Gotei 13!</p>
 </header>
 
 <nav>
-    <a href="index.html">🏠 Início</a> |
-    <a href="cadastro.html">📝 Cadastro</a> |
-    <a href="producao.html">⚙️ Produção</a> |
-    <a href="servicos.html">🛠️ Serviços</a> |
-    <a href="pesquisas.html">🔎 Pesquisas</a> |
-    <a href="portfolio.html">📋 Portfólio</a> |
-    <a href="produtos.html">🛒 Produtos</a> |
-    <a href="parceiros.html">🤝 Parceiros</a> |
-    <a href="contate.html">🌸 Contate-nos</a> |
-    <a href="ouvidoria.html">📢 Ouvidoria</a> |
-    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="producao.html">Produção</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="pesquisas.html">Pesquisas</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="contate.html">Contate-nos</a>
+    <a href="ouvidoria.html">Ouvidoria</a>
+    <a href="ceifeiro.html">Seja um Ceifeiro</a>
 </nav>
 
-<hr>
+<div class="layout">
 
-<main>
+    <aside>
+        <h2>⚔️ Zaraki</h2>
+        <p>Se quer entrar para a 11ª Divisão, mostre que tem coragem para lutar.</p>
 
-<section>
+        <h3>🌸 Yachiru</h3>
+        <p>Hehehe! Será que você consegue acompanhar o Ken-chan?</p>
+    </aside>
 
-<h2>⚔️ Teste da 11ª Divisão</h2>
+    <main>
+        <section>
+            <h2>Recrutamento de Shinigamis</h2>
+            <p>Preencha o formulário para demonstrar seu interesse em fazer parte do Gotei 13.</p>
 
-<p>
-    Se você deseja fazer parte da 11ª Divisão,
-    precisa demonstrar coragem, determinação e vontade
-    de enfrentar desafios.
-</p>
+            <form>
+                <fieldset>
+                    <legend>Ficha de recrutamento</legend>
 
-<p>
-    Zaraki não procura apenas alguém que diga ser forte.
-    Ele valoriza aqueles que conseguem continuar lutando
-    mesmo diante de grandes dificuldades.
-</p>
+                    <label for="nome">Nome do candidato:</label>
+                    <input type="text" id="nome" name="nome" required>
 
-</section>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="1">
 
-<hr>
+                    <label for="divisao">Divisão desejada:</label>
+                    <select id="divisao" name="divisao">
+                        <option value="11">11ª Divisão</option>
+                        <option value="6">6ª Divisão</option>
+                        <option value="10">10ª Divisão</option>
+                        <option value="4">4ª Divisão</option>
+                        <option value="outra">Outra divisão</option>
+                    </select>
 
-<form>
+                    <label for="habilidade">Principal habilidade:</label>
+                    <input type="text" id="habilidade" name="habilidade">
 
-<fieldset>
+                    <label for="zanpakuto">Nome da sua Zanpakutō:</label>
+                    <input type="text" id="zanpakuto" name="zanpakuto">
 
-<legend>⚔️ Dados do candidato</legend>
+                    <p>Você tem coragem para enfrentar adversários fortes?</p>
+                    <label><input type="radio" name="coragem" value="sim"> Sim</label>
+                    <label><input type="radio" name="coragem" value="nao"> Não</label>
 
-<p>
-<label for="nome">Nome:</label><br>
-<input type="text" id="nome" name="nome" required>
-</p>
+                    <label for="motivacao">Por que deseja ser um Shinigami?</label>
+                    <textarea id="motivacao" name="motivacao" rows="4"></textarea>
 
-<p>
-<label for="idade">Idade:</label><br>
-<input type="number" id="idade" name="idade">
-</p>
+                    <input type="submit" value="Enviar candidatura">
+                    <input type="reset" value="Limpar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-<p>
-<label for="divisao">Divisão desejada:</label><br>
-
-<select id="divisao" name="divisao">
-
-<option>11ª Divisão</option>
-<option>Outra divisão</option>
-
-</select>
-</p>
-
-<p>
-<label for="habilidade">Qual é sua principal habilidade?</label><br>
-
-<textarea id="habilidade"
-          name="habilidade"
-          rows="5"
-          cols="50"></textarea>
-</p>
-
-<p>
-<label for="zanpakuto">Qual seria o nome da sua Zanpakutō?</label><br>
-
-<input type="text"
-       id="zanpakuto"
-       name="zanpakuto">
-</p>
-
-<p>
-Você teria coragem de enfrentar Zaraki?
-</p>
-
-<input type="radio" id="sim" name="coragem" value="sim">
-<label for="sim">Sim!</label>
-
-<input type="radio" id="talvez" name="coragem" value="talvez">
-<label for="talvez">Talvez...</label>
-
-<input type="radio" id="nao" name="coragem" value="nao">
-<label for="nao">Não.</label>
-
-<p>
-<label for="motivacao">Por que você quer entrar para a 11ª Divisão?</label><br>
-
-<textarea id="motivacao"
-          name="motivacao"
-          rows="7"
-          cols="50"></textarea>
-</p>
-
-<input type="submit" value="⚔️ Enviar candidatura">
-
-</fieldset>
-
-</form>
-
-<hr>
-
-<aside>
-
-<h2>⚔️ Zaraki:</h2>
-
-<p>
-    Se veio até aqui, espero que tenha coragem.
-</p>
-
-<p>
-    Não me interessa o tamanho do seu discurso.
-    Quero saber se você consegue continuar de pé.
-</p>
-
-</aside>
-
-<hr>
-
-<section>
-
-<h2>🌸 Yachiru:</h2>
-
-<p>
-    Hehehe! Boa sorte!
-    Se conseguir sobreviver ao teste do Ken-chan,
-    talvez você consiga entrar!
-</p>
-
-</section>
-
-</main>
+</div>
 
 <footer>
-<p><a href="index.html">🏠 Voltar para o início</a></p>
+    <p>Recrutamento fictício inspirado no universo de Bleach.</p>
+    <p><a href="index.html">Voltar para o início</a></p>
 </footer>
 
 </body>

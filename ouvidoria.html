@@ -1,120 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ouvidoria | 11ª Divisão</title>
+    <title>Ouvidoria - Bleach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <h1>📢 Ouvidoria</h1>
-    <p>Sua opinião também importa!</p>
+    <p>Sua opinião é importante para o nosso site.</p>
 </header>
 
 <nav>
-    <a href="index.html">🏠 Início</a> |
-    <a href="cadastro.html">📝 Cadastro</a> |
-    <a href="producao.html">⚙️ Produção</a> |
-    <a href="servicos.html">🛠️ Serviços</a> |
-    <a href="pesquisas.html">🔎 Pesquisas</a> |
-    <a href="portfolio.html">📋 Portfólio</a> |
-    <a href="produtos.html">🛒 Produtos</a> |
-    <a href="parceiros.html">🤝 Parceiros</a> |
-    <a href="contate.html">🌸 Contate-nos</a> |
-    <a href="ouvidoria.html">📢 Ouvidoria</a> |
-    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="producao.html">Produção</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="pesquisas.html">Pesquisas</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="contate.html">Contate-nos</a>
+    <a href="ouvidoria.html">Ouvidoria</a>
+    <a href="ceifeiro.html">Seja um Ceifeiro</a>
 </nav>
 
-<hr>
+<div class="layout">
 
-<main>
+    <aside>
+        <h2>🌸 Yachiru</h2>
+        <p>Hehehe! Se tiver alguma ideia para melhorar o site, conte para a gente!</p>
+    </aside>
 
-<section>
+    <main>
+        <section>
+            <h2>Envie sua opinião</h2>
+            <p>Use este formulário para registrar sugestões, elogios, reclamações ou dúvidas sobre o site.</p>
 
-<h2>🌸 Yachiru está ouvindo!</h2>
+            <form>
+                <fieldset>
+                    <legend>Manifestação</legend>
 
-<p>
-    Hehehe! Tem alguma coisa que você quer contar?
-    Pode mandar sua opinião!
-</p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome">
 
-<p>
-    Você pode enviar uma sugestão, elogio, dúvida ou reclamação.
-</p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email">
 
-</section>
+                    <label for="tipo">Tipo de manifestação:</label>
+                    <select id="tipo" name="tipo">
+                        <option value="sugestao">Sugestão</option>
+                        <option value="elogio">Elogio</option>
+                        <option value="reclamacao">Reclamação</option>
+                        <option value="duvida">Dúvida</option>
+                        <option value="outro">Outro</option>
+                    </select>
 
-<hr>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-<form>
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-<fieldset>
-
-<legend>📢 Registro da manifestação</legend>
-
-<p>
-<label for="nome">Nome:</label><br>
-<input type="text" id="nome" name="nome">
-</p>
-
-<p>
-<label for="email">E-mail:</label><br>
-<input type="email" id="email" name="email">
-</p>
-
-<p>
-<label for="tipo">Tipo:</label><br>
-
-<select id="tipo" name="tipo">
-
-<option>Sugestão</option>
-<option>Elogio</option>
-<option>Reclamação</option>
-<option>Dúvida</option>
-<option>Outro</option>
-
-</select>
-</p>
-
-<p>
-<label for="mensagem">Mensagem:</label><br>
-
-<textarea id="mensagem"
-          name="mensagem"
-          rows="8"
-          cols="50"></textarea>
-</p>
-
-<input type="submit" value="📢 Enviar">
-
-</fieldset>
-
-</form>
-
-<hr>
-
-<aside>
-
-<h2>🌸 Yachiru:</h2>
-
-<p>
-    Eu vou ler tudo! Hehehe!
-</p>
-
-<p>
-    Só espero que ninguém reclame do Ken-chan...
-    Ele pode acabar querendo resolver a reclamação numa batalha!
-</p>
-
-</aside>
-
-</main>
+</div>
 
 <footer>
-<p><a href="index.html">🏠 Voltar para o início</a></p>
+    <p>Ouvidoria do site de Bleach.</p>
+    <p><a href="index.html">Voltar para o início</a></p>
 </footer>
 
 </body>

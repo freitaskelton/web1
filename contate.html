@@ -1,115 +1,78 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contate-nos | Yachiru</title>
+    <title>Contate-nos - Bleach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
     <h1>🌸 Contate-nos</h1>
-    <p>Fale com a 11ª Divisão</p>
+    <p>Entre em contato com a equipe do site.</p>
 </header>
 
 <nav>
-    <a href="index.html">🏠 Início</a> |
-    <a href="cadastro.html">📝 Cadastro</a> |
-    <a href="producao.html">⚙️ Produção</a> |
-    <a href="servicos.html">🛠️ Serviços</a> |
-    <a href="pesquisas.html">🔎 Pesquisas</a> |
-    <a href="portfolio.html">📋 Portfólio</a> |
-    <a href="produtos.html">🛒 Produtos</a> |
-    <a href="parceiros.html">🤝 Parceiros</a> |
-    <a href="contate.html">🌸 Contate-nos</a> |
-    <a href="ouvidoria.html">📢 Ouvidoria</a> |
-    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="producao.html">Produção</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="pesquisas.html">Pesquisas</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="contate.html">Contate-nos</a>
+    <a href="ouvidoria.html">Ouvidoria</a>
+    <a href="ceifeiro.html">Seja um Ceifeiro</a>
 </nav>
 
-<hr>
+<div class="layout">
 
-<main>
+    <aside>
+        <h2>🌸 Yachiru</h2>
+        <p>Hehehe! Quer falar alguma coisa? Pode mandar sua mensagem!</p>
+    </aside>
 
-<section>
+    <main>
+        <section>
+            <h2>Fale conosco</h2>
 
-<figure>
-    <img src="imagens/yachiru.jpeg"
-         alt="Yachiru"
-         width="300">
+            <figure>
+                <img src="imagens/yachiru.jpeg" alt="Yachiru Kusajishi">
+                <figcaption>Yachiru Kusajishi, tenente da 11ª Divisão.</figcaption>
+            </figure>
 
-    <figcaption>Yachiru Kusajishi</figcaption>
-</figure>
+            <p>Se você tiver alguma dúvida, sugestão ou mensagem sobre o site, utilize o formulário abaixo.</p>
 
-<h2>🌸 Fale com Yachiru</h2>
+            <form>
+                <fieldset>
+                    <legend>Formulário de contato</legend>
 
-<p>
-    Hehehe! Oii! Você chegou na página de contato!
-</p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
 
-<p>
-    Se quiser falar conosco, envie uma mensagem.
-    Eu vou tentar ajudar antes que o Ken-chan resolva tudo
-    com uma luta!
-</p>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
 
-</section>
+                    <label for="assunto">Assunto:</label>
+                    <input type="text" id="assunto" name="assunto" required>
 
-<hr>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-<form>
+                    <input type="submit" value="Enviar mensagem">
+                    <input type="reset" value="Limpar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-<fieldset>
-
-<legend>📩 Formulário de contato</legend>
-
-<p>
-<label for="nome">Nome:</label><br>
-<input type="text" id="nome" name="nome" required>
-</p>
-
-<p>
-<label for="email">E-mail:</label><br>
-<input type="email" id="email" name="email" required>
-</p>
-
-<p>
-<label for="assunto">Assunto:</label><br>
-<input type="text" id="assunto" name="assunto">
-</p>
-
-<p>
-<label for="mensagem">Mensagem:</label><br>
-
-<textarea id="mensagem"
-          name="mensagem"
-          rows="8"
-          cols="50"></textarea>
-</p>
-
-<input type="submit" value="🌸 Enviar mensagem">
-
-</fieldset>
-
-</form>
-
-<hr>
-
-<aside>
-
-<h2>⚔️ Zaraki:</h2>
-
-<p>
-    Se sua mensagem for sobre uma luta, pode falar diretamente comigo.
-</p>
-
-</aside>
-
-</main>
+</div>
 
 <footer>
-<p><a href="index.html">🏠 Voltar para o início</a></p>
+    <p>Entre em contato conosco.</p>
+    <p><a href="index.html">Voltar para o início</a></p>
 </footer>
 
 </body>

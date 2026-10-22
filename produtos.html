@@ -1,155 +1,123 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produtos | 11ª Divisão</title>
+    <title>Produtos - Bleach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>🛒 Produtos da 11ª Divisão</h1>
-    <p>Produtos temáticos de Zaraki e Bleach</p>
+    <h1>🛒 Produtos</h1>
+    <p>Produtos temáticos de Zaraki e da 11ª Divisão.</p>
 </header>
 
 <nav>
-    <a href="index.html">🏠 Início</a> |
-    <a href="cadastro.html">📝 Cadastro</a> |
-    <a href="producao.html">⚙️ Produção</a> |
-    <a href="servicos.html">🛠️ Serviços</a> |
-    <a href="pesquisas.html">🔎 Pesquisas</a> |
-    <a href="portfolio.html">📋 Portfólio</a> |
-    <a href="produtos.html">🛒 Produtos</a> |
-    <a href="parceiros.html">🤝 Parceiros</a> |
-    <a href="contate.html">🌸 Contate-nos</a> |
-    <a href="ouvidoria.html">📢 Ouvidoria</a> |
-    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="producao.html">Produção</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="pesquisas.html">Pesquisas</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="contate.html">Contate-nos</a>
+    <a href="ouvidoria.html">Ouvidoria</a>
+    <a href="ceifeiro.html">Seja um Ceifeiro</a>
 </nav>
 
-<hr>
+<div class="layout">
 
-<main>
+    <aside>
+        <h2>🌸 Yachiru</h2>
+        <p>Hehehe! Escolha um produto para levar uma lembrança do Ken-chan!</p>
+    </aside>
 
-<section>
-<h2>🛒 Catálogo</h2>
+    <main>
+        <section>
+            <h2>Catálogo de produtos</h2>
 
-<table border="1">
+            <table>
+                <tr>
+                    <th>Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                </tr>
+                <tr>
+                    <td>Moletom do Zaraki</td>
+                    <td>Moletom temático do capitão.</td>
+                    <td>R$ 129,90</td>
+                </tr>
+                <tr>
+                    <td>Moletom da Yachiru</td>
+                    <td>Moletom inspirado na tenente.</td>
+                    <td>R$ 119,90</td>
+                </tr>
+                <tr>
+                    <td>Espada do Zaraki</td>
+                    <td>Réplica decorativa inspirada em Nozarashi.</td>
+                    <td>R$ 199,90</td>
+                </tr>
+                <tr>
+                    <td>Camiseta da 11ª Divisão</td>
+                    <td>Camiseta temática da divisão.</td>
+                    <td>R$ 69,90</td>
+                </tr>
+                <tr>
+                    <td>Caneca do Ken-chan</td>
+                    <td>Caneca temática de Zaraki.</td>
+                    <td>R$ 39,90</td>
+                </tr>
+                <tr>
+                    <td>Pôster da 11ª Divisão</td>
+                    <td>Pôster decorativo.</td>
+                    <td>R$ 29,90</td>
+                </tr>
+            </table>
+        </section>
 
-<tr>
-    <th>Produto</th>
-    <th>Descrição</th>
-    <th>Preço</th>
-</tr>
+        <section>
+            <h2>Faça seu pedido</h2>
 
-<tr>
-    <td>Moletom do Zaraki</td>
-    <td>Moletom inspirado no capitão da 11ª Divisão.</td>
-    <td>R$ 129,90</td>
-</tr>
+            <form>
+                <fieldset>
+                    <legend>Dados do pedido</legend>
 
-<tr>
-    <td>Moletom da Yachiru</td>
-    <td>Produto inspirado na tenente da 11ª Divisão.</td>
-    <td>R$ 119,90</td>
-</tr>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
 
-<tr>
-    <td>Espada do Zaraki</td>
-    <td>Réplica temática inspirada em Nozarashi.</td>
-    <td>R$ 199,90</td>
-</tr>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
 
-<tr>
-    <td>Camiseta da 11ª Divisão</td>
-    <td>Camiseta temática da divisão.</td>
-    <td>R$ 69,90</td>
-</tr>
+                    <label for="produto">Produto:</label>
+                    <select id="produto" name="produto">
+                        <option>Moletom do Zaraki</option>
+                        <option>Moletom da Yachiru</option>
+                        <option>Espada do Zaraki</option>
+                        <option>Camiseta da 11ª Divisão</option>
+                        <option>Caneca do Ken-chan</option>
+                        <option>Pôster da 11ª Divisão</option>
+                    </select>
 
-<tr>
-    <td>Caneca do Ken-chan</td>
-    <td>Caneca temática de Zaraki.</td>
-    <td>R$ 39,90</td>
-</tr>
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" id="quantidade" name="quantidade" min="1" value="1">
 
-<tr>
-    <td>Poster da 11ª Divisão</td>
-    <td>Poster decorativo temático.</td>
-    <td>R$ 29,90</td>
-</tr>
+                    <label for="endereco">Endereço:</label>
+                    <textarea id="endereco" name="endereco" rows="3"></textarea>
 
-</table>
-</section>
+                    <input type="submit" value="Enviar pedido">
+                    <input type="reset" value="Limpar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-<hr>
-
-<section>
-<h2>🌸 Yachiru atende a loja</h2>
-
-<p>
-    Hehehe! Bem-vindo à nossa loja!
-    Temos várias coisas legais do Ken-chan!
-</p>
-
-<p>
-    Escolha seu produto e preencha o formulário.
-</p>
-</section>
-
-<hr>
-
-<form>
-
-<fieldset>
-
-<legend>🛒 Formulário de compra</legend>
-
-<p>
-<label for="nome">Nome:</label><br>
-<input type="text" id="nome" name="nome" required>
-</p>
-
-<p>
-<label for="email">E-mail:</label><br>
-<input type="email" id="email" name="email" required>
-</p>
-
-<p>
-<label for="produto">Produto:</label><br>
-
-<select id="produto" name="produto">
-
-<option>Moletom do Zaraki</option>
-<option>Moletom da Yachiru</option>
-<option>Espada do Zaraki</option>
-<option>Camiseta da 11ª Divisão</option>
-<option>Caneca do Ken-chan</option>
-<option>Poster da 11ª Divisão</option>
-
-</select>
-</p>
-
-<p>
-<label for="quantidade">Quantidade:</label><br>
-<input type="number" id="quantidade" name="quantidade" min="1">
-</p>
-
-<p>
-<label for="endereco">Endereço:</label><br>
-<textarea id="endereco" name="endereco" rows="5" cols="40"></textarea>
-</p>
-
-<input type="submit" value="🛒 Finalizar pedido">
-
-</fieldset>
-
-</form>
-
-</main>
+</div>
 
 <footer>
-<p><a href="index.html">🏠 Voltar para o início</a></p>
+    <p>Catálogo fictício para o projeto temático de Bleach.</p>
+    <p><a href="index.html">Voltar para o início</a></p>
 </footer>
 
 </body>

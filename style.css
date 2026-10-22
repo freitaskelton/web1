@@ -1,0 +1,447 @@
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #eeeeee;
+    background-color: #100d10;
+}
+
+/* HEADER */
+
+header {
+    padding: 30px 15px;
+    text-align: center;
+    background: linear-gradient(135deg, #18090c, #790019, #26070e);
+    border: 2px solid #a80027;
+    border-bottom: 5px solid #ed174c;
+}
+
+header h1 {
+    margin: 0;
+    color: white;
+    font-size: 36px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #ffb5c6;
+}
+
+/* NAV */
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    padding: 15px;
+    background-color: #1c171b;
+    border: 1px solid #4a3039;
+    border-top: none;
+    border-bottom: 3px solid #a80027;
+}
+
+nav a {
+    padding: 8px 12px;
+    color: white;
+    background-color: #292127;
+    border: 1px solid #50323e;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #a80027;
+    border-color: #ff5578;
+}
+
+/* LAYOUT PRINCIPAL */
+
+.layout {
+    display: grid;
+    grid-template-columns: minmax(190px, 28%) minmax(0, 1fr);
+    gap: 18px;
+    margin: 20px 0;
+    align-items: stretch;
+}
+
+/* ASIDE */
+
+aside {
+    min-width: 0;
+    padding: 20px;
+    background: linear-gradient(160deg, #251820, #171217);
+    border: 1px solid #59303f;
+    border-left: 4px solid #f05a94;
+}
+
+aside h2,
+aside h3 {
+    color: #ff8fba;
+    border-bottom: 1px solid #613448;
+    padding-bottom: 8px;
+}
+
+/* MAIN */
+
+main {
+    min-width: 0;
+    padding: 25px;
+    background-color: #1b171b;
+    border: 1px solid #45323b;
+    border-top: 4px solid #a80027;
+}
+
+h2 {
+    color: #ff4d70;
+    border-bottom: 1px solid #5b2838;
+    padding-bottom: 8px;
+}
+
+h3 {
+    color: #ff8fba;
+}
+
+p {
+    color: #e5dfe3;
+}
+
+strong {
+    color: #ff829d;
+}
+
+section {
+    margin: 25px 0;
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+/* IMAGENS */
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figure {
+    margin: 20px 0;
+    padding: 12px;
+    background-color: #21171e;
+    border: 1px solid #59303f;
+    border-left: 3px solid #ed174c;
+}
+
+figure img {
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 10px;
+    color: #ffb0cb;
+    text-align: center;
+    font-style: italic;
+}
+
+/* DESTAQUE DE ZARAKI NO INDEX */
+
+.zaraki-destaque {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 18px;
+    background-color: #151115;
+    border: 1px solid #48232e;
+    border-left: 4px solid #a80027;
+}
+
+.imagem-grid {
+    flex: 0 1 310px;
+    min-width: 0;
+}
+
+.imagem-grid table {
+    border-collapse: collapse;
+    border: 2px solid #ed174c;
+    box-shadow: 0 0 12px #a8002750;
+}
+
+.imagem-grid td {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    border: 1px solid #7b253d;
+}
+
+.imagem-grid td img {
+    display: block;
+    width: 260px;
+    max-width: none;
+    height: auto;
+}
+
+.zaraki-destaque article {
+    flex: 1 1 220px;
+    min-width: 0;
+}
+
+.zaraki-destaque article h3 {
+    margin-top: 0;
+    color: #ff4d70;
+}
+
+/* TABELAS */
+
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+main > table {
+    width: 100%;
+}
+
+caption {
+    margin-bottom: 10px;
+    color: #ff8fba;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #573340;
+    text-align: left;
+    vertical-align: top;
+}
+
+th {
+    color: white;
+    background-color: #790019;
+}
+
+tbody tr {
+    background-color: #211a20;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2b2028;
+}
+
+tbody tr:hover {
+    background-color: #43212f;
+}
+
+/* FORMULÁRIOS */
+
+form {
+    width: 100%;
+}
+
+fieldset {
+    padding: 20px;
+    border: 1px solid #683044;
+    border-top: 3px solid #a80027;
+    background-color: #171217;
+}
+
+legend {
+    padding: 5px 12px;
+    color: #ff8fba;
+    background-color: #291720;
+    border: 1px solid #683044;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 5px;
+    color: #f0dce5;
+    font-weight: bold;
+}
+
+input:not([type="radio"]):not([type="checkbox"]),
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 550px;
+    padding: 11px;
+    color: white;
+    background-color: #292127;
+    border: 1px solid #68404f;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 15px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #ed174c;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #ed174c;
+}
+
+button,
+input[type="submit"],
+input[type="reset"] {
+    margin: 18px 8px 0 0;
+    padding: 11px 20px;
+    color: white;
+    background-color: #a80027;
+    border: 1px solid #ed174c;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #d00038;
+}
+
+/* LINKS */
+
+main a,
+aside a {
+    color: #ff91b9;
+    text-decoration: none;
+}
+
+main a:hover,
+aside a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* LISTAS */
+
+main li {
+    margin-bottom: 8px;
+}
+
+main li::marker {
+    color: #ed174c;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 22px;
+    text-align: center;
+    background: linear-gradient(135deg, #26070e, #790019, #1b080d);
+    border: 1px solid #a80027;
+    border-top: 4px solid #ed174c;
+}
+
+footer p {
+    color: #f3dce4;
+}
+
+footer a {
+    color: #ffb0cb;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+    body {
+        padding: 10px;
+    }
+
+    .layout {
+        grid-template-columns: minmax(170px, 28%) minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    aside {
+        padding: 13px;
+    }
+
+    .imagem-grid {
+        flex-basis: 100%;
+    }
+
+    .imagem-grid td img {
+        width: 220px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 6px;
+    }
+
+    header h1 {
+        font-size: 27px;
+    }
+
+    nav {
+        justify-content: flex-start;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .layout {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    main {
+        padding: 14px;
+    }
+
+    .zaraki-destaque {
+        flex-direction: column;
+    }
+
+    .imagem-grid td img {
+        width: 200px;
+    }
+
+    th,
+    td {
+        padding: 7px;
+        font-size: 14px;
+    }
+
+    fieldset {
+        padding: 12px;
+    }
+}

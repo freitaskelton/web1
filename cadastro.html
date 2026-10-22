@@ -1,144 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro | 11ª Divisão</title>
+    <title>Cadastro - Bleach</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-    <h1>📝 Cadastro da 11ª Divisão</h1>
-    <p>Registre-se como fã de Zaraki Kenpachi!</p>
+    <h1>📝 Cadastro</h1>
+    <p>Cadastre-se para fazer parte do nosso universo de Bleach!</p>
 </header>
 
 <nav>
-    <a href="index.html">🏠 Início</a> |
-    <a href="cadastro.html">📝 Cadastro</a> |
-    <a href="producao.html">⚙️ Produção</a> |
-    <a href="servicos.html">🛠️ Serviços</a> |
-    <a href="pesquisas.html">🔎 Pesquisas</a> |
-    <a href="portfolio.html">📋 Portfólio</a> |
-    <a href="produtos.html">🛒 Produtos</a> |
-    <a href="parceiros.html">🤝 Parceiros</a> |
-    <a href="contate.html">🌸 Contate-nos</a> |
-    <a href="ouvidoria.html">📢 Ouvidoria</a> |
-    <a href="ceifeiro.html">⚔️ Seja um Ceifeiro</a>
+    <a href="index.html">Início</a>
+    <a href="cadastro.html">Cadastro</a>
+    <a href="producao.html">Produção</a>
+    <a href="servicos.html">Serviços</a>
+    <a href="pesquisas.html">Pesquisas</a>
+    <a href="portfolio.html">Portfólio</a>
+    <a href="produtos.html">Produtos</a>
+    <a href="parceiros.html">Parceiros</a>
+    <a href="contate.html">Contate-nos</a>
+    <a href="ouvidoria.html">Ouvidoria</a>
+    <a href="ceifeiro.html">Seja um Ceifeiro</a>
 </nav>
 
-<hr>
+<div class="layout">
 
-<main>
+    <aside>
+        <h2>🌸 Yachiru</h2>
+        <p>Hehehe! Vamos descobrir quem você é!</p>
+        <p>Será que você também gosta do Ken-chan?</p>
+    </aside>
 
-<section>
-    <h2>🌸 Cadastro</h2>
+    <main>
+        <section>
+            <h2>Cadastro de fã</h2>
+            <figure>
+                <img src="imagens/zarakiyachiru.png" alt="Zaraki Kenpachi e Yachiru Kusajishi">
+                <figcaption>Zaraki e sua companheira Yachiru.</figcaption>
+            </figure>
 
-    <p>
-        Hehehe! Quer entrar para o nosso grupo?
-        Então preencha o cadastro!
-    </p>
+            <form>
+                <fieldset>
+                    <legend>Seus dados</legend>
 
-    <figure>
-        <img src="imagens/zarakiyachiru.png"
-             alt="Zaraki Kenpachi e Yachiru"
-             width="400">
-        <figcaption>Zaraki e Yachiru — 11ª Divisão</figcaption>
-    </figure>
-</section>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
 
-<hr>
+                    <label for="idade">Idade:</label>
+                    <input type="number" id="idade" name="idade" min="1">
 
-<form>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
 
-    <fieldset>
-        <legend>👤 Informações pessoais</legend>
+                    <label for="nascimento">Data de nascimento:</label>
+                    <input type="date" id="nascimento" name="nascimento">
 
-        <p>
-            <label for="nome">Nome:</label><br>
-            <input type="text" id="nome" name="nome" required>
-        </p>
+                    <label for="personagem">Personagem favorito:</label>
+                    <select id="personagem" name="personagem">
+                        <option value="zaraki">Zaraki Kenpachi</option>
+                        <option value="yachiru">Yachiru Kusajishi</option>
+                        <option value="ichigo">Ichigo Kurosaki</option>
+                        <option value="rukia">Rukia Kuchiki</option>
+                        <option value="outro">Outro</option>
+                    </select>
 
-        <p>
-            <label for="idade">Idade:</label><br>
-            <input type="number" id="idade" name="idade">
-        </p>
+                    <p>Você gosta do Zaraki?</p>
+                    <label><input type="radio" name="gosta" value="sim"> Sim!</label>
+                    <label><input type="radio" name="gosta" value="nao"> Não</label>
 
-        <p>
-            <label for="email">E-mail:</label><br>
-            <input type="email" id="email" name="email">
-        </p>
+                    <label for="motivo">O que você mais gosta em Bleach?</label>
+                    <textarea id="motivo" name="motivo" rows="4"></textarea>
 
-        <p>
-            <label for="nascimento">Data de nascimento:</label><br>
-            <input type="date" id="nascimento" name="nascimento">
-        </p>
+                    <input type="submit" value="Cadastrar">
+                    <input type="reset" value="Limpar">
+                </fieldset>
+            </form>
+        </section>
+    </main>
 
-    </fieldset>
-
-    <fieldset>
-        <legend>⚔️ Preferências</legend>
-
-        <p>
-            <label for="personagem">Personagem favorito:</label><br>
-
-            <select id="personagem" name="personagem">
-                <option value="zaraki">Zaraki Kenpachi</option>
-                <option value="yachiru">Yachiru</option>
-                <option value="ichigo">Ichigo Kurosaki</option>
-                <option value="rukia">Rukia Kuchiki</option>
-                <option value="byakuya">Byakuya Kuchiki</option>
-                <option value="outro">Outro</option>
-            </select>
-        </p>
-
-        <p>
-            Você gosta do Zaraki?
-        </p>
-
-        <input type="radio" id="sim" name="zaraki" value="sim">
-        <label for="sim">Sim!</label>
-
-        <input type="radio" id="muito" name="zaraki" value="muito">
-        <label for="muito">Muito!</label>
-
-        <input type="radio" id="nao" name="zaraki" value="nao">
-        <label for="nao">Ainda não conheço.</label>
-
-        <p>
-            <label for="gosto">O que você mais gosta em Bleach?</label><br>
-
-            <textarea id="gosto"
-                      name="gosto"
-                      rows="6"
-                      cols="50"></textarea>
-        </p>
-
-    </fieldset>
-
-    <p>
-        <input type="submit" value="⚔️ Enviar Cadastro">
-        <input type="reset" value="Limpar">
-    </p>
-
-</form>
-
-<hr>
-
-<aside>
-    <h2>🌸 Yachiru diz:</h2>
-
-    <p>
-        Hehehe! Prontinho! Agora você já pode fazer parte
-        do nosso grupo de fãs!
-    </p>
-</aside>
-
-</main>
+</div>
 
 <footer>
-    <p><a href="index.html">🏠 Voltar para o início</a></p>
+    <p>Cadastro de fãs de Bleach.</p>
+    <p><a href="index.html">Voltar para o início</a></p>
 </footer>
 
 </body>
