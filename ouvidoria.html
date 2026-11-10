@@ -3,76 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ouvidoria - Bleach</title>
+    <title>Ouvidoria - 11ª Divisão</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>📢 Ouvidoria</h1>
-    <p>Sua opinião é importante para o nosso site.</p>
+    <p>Sua opinião é importante para nossa divisão.</p>
 </header>
 
 <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="producao.html">Produção</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="pesquisas.html">Pesquisas</a>
-    <a href="portfolio.html">Portfólio</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="parceiros.html">Parceiros</a>
-    <a href="contate.html">Contate-nos</a>
-    <a href="ouvidoria.html">Ouvidoria</a>
-    <a href="ceifeiro.html">Seja um Ceifeiro</a>
+    <a href="index.html">🏠 Início</a>
+    <details class="dropdown">
+        <summary>Mais páginas</summary>
+        <div class="dropdown-conteudo">
+            <a href="cadastro.html">Cadastro</a>
+            <a href="producao.html">Produção</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="pesquisas.html">Pesquisas</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="contate.html">Contate-nos</a>
+            <a href="ouvidoria.html">Ouvidoria</a>
+            <a href="ceifeiro.html">Seja um Ceifeiro</a>
+            <a href="iinde.html">11ª Divisão</a>
+        </div>
+    </details>
 </nav>
 
 <div class="layout">
 
-    <aside>
-        <h2>🌸 Yachiru</h2>
-        <p>Hehehe! Se tiver alguma ideia para melhorar o site, conte para a gente!</p>
-    </aside>
+<aside>
+    <h2>Yachiru</h2>
+    <p>Ken-chan não é muito bom com formulários, então pode falar comigo!</p>
+    <p>Hehehe!</p>
+</aside>
 
-    <main>
-        <section>
-            <h2>Envie sua opinião</h2>
-            <p>Use este formulário para registrar sugestões, elogios, reclamações ou dúvidas sobre o site.</p>
+<main>
+    <h2>Envie sua opinião</h2>
+    <p>Utilize este espaço para compartilhar sua experiência com o site.</p>
 
-            <form>
-                <fieldset>
-                    <legend>Manifestação</legend>
+    <form>
+        <fieldset>
+            <legend>Ouvidoria</legend>
 
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-                    <label for="tipo">Tipo de manifestação:</label>
-                    <select id="tipo" name="tipo">
-                        <option value="sugestao">Sugestão</option>
-                        <option value="elogio">Elogio</option>
-                        <option value="reclamacao">Reclamação</option>
-                        <option value="duvida">Dúvida</option>
-                        <option value="outro">Outro</option>
-                    </select>
+            <label for="tipo">Tipo de manifestação:</label>
+            <select id="tipo" name="tipo">
+                <option>Sugestão</option>
+                <option>Elogio</option>
+                <option>Reclamação</option>
+                <option>Dúvida</option>
+                <option>Outro</option>
+            </select>
 
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+            <label for="mensagem">Sua mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
 
-                    <input type="submit" value="Enviar">
-                    <input type="reset" value="Limpar">
-                </fieldset>
-            </form>
-        </section>
-    </main>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</main>
 
 </div>
 
 <footer>
-    <p>Ouvidoria do site de Bleach.</p>
-    <p><a href="index.html">Voltar para o início</a></p>
+    <p>Ouvidoria — 11ª Divisão.</p>
 </footer>
 
 </body>

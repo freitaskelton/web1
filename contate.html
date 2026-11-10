@@ -3,76 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contate-nos - Bleach</title>
+    <title>Contate-nos - Yachiru</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>🌸 Contate-nos</h1>
-    <p>Entre em contato com a equipe do site.</p>
+    <p>Entre em contato com a 11ª Divisão.</p>
 </header>
 
 <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="producao.html">Produção</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="pesquisas.html">Pesquisas</a>
-    <a href="portfolio.html">Portfólio</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="parceiros.html">Parceiros</a>
-    <a href="contate.html">Contate-nos</a>
-    <a href="ouvidoria.html">Ouvidoria</a>
-    <a href="ceifeiro.html">Seja um Ceifeiro</a>
+    <a href="index.html">🏠 Início</a>
+    <details class="dropdown">
+        <summary>Mais páginas</summary>
+        <div class="dropdown-conteudo">
+            <a href="cadastro.html">Cadastro</a>
+            <a href="producao.html">Produção</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="pesquisas.html">Pesquisas</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="contate.html">Contate-nos</a>
+            <a href="ouvidoria.html">Ouvidoria</a>
+            <a href="ceifeiro.html">Seja um Ceifeiro</a>
+            <a href="iinde.html">11ª Divisão</a>
+        </div>
+    </details>
 </nav>
 
 <div class="layout">
 
-    <aside>
-        <h2>🌸 Yachiru</h2>
-        <p>Hehehe! Quer falar alguma coisa? Pode mandar sua mensagem!</p>
-    </aside>
+<aside>
+    <h2>Yachiru</h2>
+    <p>Hehehe! Pode mandar sua mensagem!</p>
+    <p>Vou tentar entregar para o Ken-chan!</p>
+</aside>
 
-    <main>
-        <section>
-            <h2>Fale conosco</h2>
+<main>
+    <figure>
+        <img src="imagens/yachiru.jpeg" alt="Yachiru Kusajishi" width="300">
+        <figcaption>Yachiru Kusajishi — Tenente da 11ª Divisão.</figcaption>
+    </figure>
 
-            <figure>
-                <img src="imagens/yachiru.jpeg" alt="Yachiru Kusajishi">
-                <figcaption>Yachiru Kusajishi, tenente da 11ª Divisão.</figcaption>
-            </figure>
+    <h2>Fale conosco</h2>
+    <p>Tem alguma dúvida, sugestão ou mensagem? Utilize o formulário abaixo.</p>
 
-            <p>Se você tiver alguma dúvida, sugestão ou mensagem sobre o site, utilize o formulário abaixo.</p>
+    <form>
+        <fieldset>
+            <legend>Mensagem</legend>
 
-            <form>
-                <fieldset>
-                    <legend>Formulário de contato</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" id="email" name="email" required>
+            <label for="assunto">Assunto:</label>
+            <input type="text" id="assunto" name="assunto" required>
 
-                    <label for="assunto">Assunto:</label>
-                    <input type="text" id="assunto" name="assunto" required>
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="6" required></textarea>
 
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
-
-                    <input type="submit" value="Enviar mensagem">
-                    <input type="reset" value="Limpar">
-                </fieldset>
-            </form>
-        </section>
-    </main>
+            <input type="submit" value="Enviar mensagem">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
+</main>
 
 </div>
 
 <footer>
-    <p>Entre em contato conosco.</p>
-    <p><a href="index.html">Voltar para o início</a></p>
+    <p>Contate-nos — 11ª Divisão.</p>
 </footer>
 
 </body>

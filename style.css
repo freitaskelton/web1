@@ -1,5 +1,3 @@
-/* CONFIGURAÇÕES GERAIS */
-
 * {
     box-sizing: border-box;
 }
@@ -17,8 +15,6 @@ body {
     color: #eeeeee;
     background-color: #100d10;
 }
-
-/* HEADER */
 
 header {
     padding: 30px 15px;
@@ -40,21 +36,21 @@ header p {
     color: #ffb5c6;
 }
 
-/* NAV */
-
 nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 8px;
     padding: 15px;
     background-color: #1c171b;
     border: 1px solid #4a3039;
-    border-top: none;
     border-bottom: 3px solid #a80027;
 }
 
-nav a {
+nav a,
+.dropdown summary {
+    display: inline-block;
     padding: 8px 12px;
     color: white;
     background-color: #292127;
@@ -63,31 +59,79 @@ nav a {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
-nav a:hover {
+nav a:hover,
+.dropdown summary:hover {
     background-color: #a80027;
     border-color: #ff5578;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown summary {
+    list-style: none;
+}
+
+.dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.dropdown summary::after {
+    content: " ▼";
+    font-size: 10px;
+}
+
+.dropdown[open] .dropdown-conteudo {
+    display: flex;
+}
+
+.dropdown-conteudo {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 100;
+    min-width: 190px;
+    flex-direction: column;
+    padding: 8px;
+    gap: 5px;
+    background-color: #21171e;
+    border: 1px solid #a80027;
+    box-shadow: 0 5px 12px #00000080;
+}
+
+.dropdown-conteudo a {
+    display: block;
 }
 
 /* LAYOUT PRINCIPAL */
 
 .layout {
     display: grid;
-    grid-template-columns: minmax(190px, 28%) minmax(0, 1fr);
+    grid-template-columns: 240px minmax(0, 1fr);
     gap: 18px;
     margin: 20px 0;
-    align-items: stretch;
+    align-items: start;
 }
 
-/* ASIDE */
+/* ASIDE FIXO */
 
 aside {
-    min-width: 0;
+    position: fixed;
+    top: 20px;
+    left: max(20px, calc((100vw - 1250px) / 2 + 20px));
+    width: 220px;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
     padding: 20px;
     background: linear-gradient(160deg, #251820, #171217);
     border: 1px solid #59303f;
     border-left: 4px solid #f05a94;
+    z-index: 50;
 }
 
 aside h2,
@@ -97,9 +141,10 @@ aside h3 {
     padding-bottom: 8px;
 }
 
-/* MAIN */
+/* CONTEÚDO PRINCIPAL */
 
 main {
+    grid-column: 2;
     min-width: 0;
     padding: 25px;
     background-color: #1b171b;
@@ -157,10 +202,9 @@ figcaption {
     margin-top: 10px;
     color: #ffb0cb;
     text-align: center;
-    font-style: italic;
 }
 
-/* DESTAQUE DE ZARAKI NO INDEX */
+/* DESTAQUE DE ZARAKI */
 
 .zaraki-destaque {
     display: flex;
@@ -173,39 +217,65 @@ figcaption {
     border-left: 4px solid #a80027;
 }
 
-.imagem-grid {
-    flex: 0 1 310px;
-    min-width: 0;
-}
-
-.imagem-grid table {
-    border-collapse: collapse;
-    border: 2px solid #ed174c;
-    box-shadow: 0 0 12px #a8002750;
-}
-
-.imagem-grid td {
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    border: 1px solid #7b253d;
-}
-
-.imagem-grid td img {
-    display: block;
-    width: 260px;
-    max-width: none;
-    height: auto;
-}
-
 .zaraki-destaque article {
     flex: 1 1 220px;
-    min-width: 0;
 }
 
-.zaraki-destaque article h3 {
-    margin-top: 0;
-    color: #ff4d70;
+/* GALERIA PESSOAS FAVORITAS */
+
+.galeria-favoritos {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.galeria-favoritos h2 {
+    flex: 1 1 150px;
+    border-bottom: none;
+}
+
+/* CONTROLES DA GALERIA */
+
+.controle-galeria {
+    display: none;
+}
+
+.grupo-imagens {
+    flex: 0 1 300px;
+    min-height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grupo-imagens label {
+    display: none;
+    cursor: pointer;
+}
+
+.grupo-imagens img {
+    width: 250px;
+    height: 300px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: #292127;
+    border: 3px solid #ed174c;
+    box-shadow: 0 5px 15px #00000090;
+}
+
+/* CADA CLIQUE MOSTRA A PRÓXIMA IMAGEM */
+
+#etapa0:checked ~ .grupo-imagens .imagem1,
+#etapa1:checked ~ .grupo-imagens .imagem2,
+#etapa2:checked ~ .grupo-imagens .imagem3,
+#etapa3:checked ~ .grupo-imagens .imagem4,
+#etapa4:checked ~ .grupo-imagens .imagem5,
+#etapa5:checked ~ .grupo-imagens .imagem6,
+#etapa6:checked ~ .grupo-imagens .imagem7 {
+    display: block;
 }
 
 /* TABELAS */
@@ -218,14 +288,6 @@ table {
 
 main > table {
     width: 100%;
-}
-
-caption {
-    margin-bottom: 10px;
-    color: #ff8fba;
-    font-size: 18px;
-    font-weight: bold;
-    text-align: left;
 }
 
 th,
@@ -247,10 +309,6 @@ tbody tr {
 
 tbody tr:nth-child(even) {
     background-color: #2b2028;
-}
-
-tbody tr:hover {
-    background-color: #43212f;
 }
 
 /* FORMULÁRIOS */
@@ -282,7 +340,7 @@ label {
     font-weight: bold;
 }
 
-input:not([type="radio"]):not([type="checkbox"]),
+input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]),
 select,
 textarea {
     display: block;
@@ -306,12 +364,6 @@ textarea {
     resize: vertical;
 }
 
-input:focus,
-select:focus,
-textarea:focus {
-    outline: 2px solid #ed174c;
-}
-
 button,
 input[type="submit"],
 input[type="reset"] {
@@ -323,12 +375,6 @@ input[type="reset"] {
     border-radius: 4px;
     font-weight: bold;
     cursor: pointer;
-}
-
-button:hover,
-input[type="submit"]:hover,
-input[type="reset"]:hover {
-    background-color: #d00038;
 }
 
 /* LINKS */
@@ -345,17 +391,7 @@ aside a:hover {
     text-decoration: underline;
 }
 
-/* LISTAS */
-
-main li {
-    margin-bottom: 8px;
-}
-
-main li::marker {
-    color: #ed174c;
-}
-
-/* FOOTER */
+/* RODAPÉ */
 
 footer {
     padding: 22px;
@@ -369,11 +405,7 @@ footer p {
     color: #f3dce4;
 }
 
-footer a {
-    color: #ffb0cb;
-}
-
-/* RESPONSIVIDADE */
+/* TELAS MENORES */
 
 @media (max-width: 800px) {
     body {
@@ -381,24 +413,18 @@ footer a {
     }
 
     .layout {
-        grid-template-columns: minmax(170px, 28%) minmax(0, 1fr);
+        grid-template-columns: 190px minmax(0, 1fr);
         gap: 12px;
+    }
+
+    aside {
+        left: 10px;
+        width: 170px;
+        padding: 13px;
     }
 
     main {
         padding: 16px;
-    }
-
-    aside {
-        padding: 13px;
-    }
-
-    .imagem-grid {
-        flex-basis: 100%;
-    }
-
-    .imagem-grid td img {
-        width: 220px;
     }
 }
 
@@ -411,28 +437,28 @@ footer a {
         font-size: 27px;
     }
 
-    nav {
-        justify-content: flex-start;
-    }
-
-    nav a {
-        font-size: 13px;
-    }
-
     .layout {
-        grid-template-columns: minmax(0, 1fr);
-    }
-
-    main {
-        padding: 14px;
-    }
-
-    .zaraki-destaque {
+        display: flex;
         flex-direction: column;
     }
 
-    .imagem-grid td img {
-        width: 200px;
+    aside {
+        position: static;
+        width: 100%;
+        max-height: none;
+    }
+
+    main {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .galeria-favoritos {
+        display: block;
+    }
+
+    .grupo-imagens {
+        min-height: 320px;
     }
 
     th,
@@ -444,4 +470,50 @@ footer a {
     fieldset {
         padding: 12px;
     }
+}
+
+/* EFEITO DE BARALHO NA GALERIA */
+
+.grupo-imagens {
+    position: relative;
+    isolation: isolate;
+    overflow: visible;
+}
+
+.grupo-imagens::before,
+.grupo-imagens::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    height: 280px;
+    background-color: #292127;
+    border: 3px solid #a80027;
+    box-shadow: 0 5px 15px #00000090;
+    pointer-events: none;
+}
+
+.grupo-imagens::before {
+    transform: rotate(-9deg) translate(-8px, 3px);
+    z-index: -2;
+}
+
+.grupo-imagens::after {
+    transform: rotate(8deg) translate(8px, 2px);
+    border-color: #f05a94;
+    z-index: -1;
+}
+
+.grupo-imagens label {
+    position: relative;
+    z-index: 1;
+}
+
+.grupo-imagens img {
+    position: relative;
+    transform: rotate(0deg);
+    transition: transform 0.3s;
+}
+
+.grupo-imagens label:hover img {
+    transform: scale(1.04) rotate(1deg);
 }

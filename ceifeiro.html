@@ -3,89 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seja um Ceifeiro - Bleach</title>
+    <title>Seja um Ceifeiro</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
     <h1>⚔️ Seja um Ceifeiro</h1>
-    <p>Mostre sua coragem e entre para o Gotei 13!</p>
+    <p>Mostre sua coragem e entre para a Soul Society!</p>
 </header>
 
 <nav>
-    <a href="index.html">Início</a>
-    <a href="cadastro.html">Cadastro</a>
-    <a href="producao.html">Produção</a>
-    <a href="servicos.html">Serviços</a>
-    <a href="pesquisas.html">Pesquisas</a>
-    <a href="portfolio.html">Portfólio</a>
-    <a href="produtos.html">Produtos</a>
-    <a href="parceiros.html">Parceiros</a>
-    <a href="contate.html">Contate-nos</a>
-    <a href="ouvidoria.html">Ouvidoria</a>
-    <a href="ceifeiro.html">Seja um Ceifeiro</a>
+    <a href="index.html">🏠 Início</a>
+    <details class="dropdown">
+        <summary>Mais páginas</summary>
+        <div class="dropdown-conteudo">
+            <a href="cadastro.html">Cadastro</a>
+            <a href="producao.html">Produção</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="pesquisas.html">Pesquisas</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="produtos.html">Produtos</a>
+            <a href="parceiros.html">Parceiros</a>
+            <a href="contate.html">Contate-nos</a>
+            <a href="ouvidoria.html">Ouvidoria</a>
+            <a href="ceifeiro.html">Seja um Ceifeiro</a>
+            <a href="iinde.html">11ª Divisão</a>
+        </div>
+    </details>
 </nav>
 
 <div class="layout">
 
-    <aside>
-        <h2>⚔️ Zaraki</h2>
-        <p>Se quer entrar para a 11ª Divisão, mostre que tem coragem para lutar.</p>
+<aside>
+    <h2>Zaraki</h2>
+    <p>Se você quer entrar para a divisão, precisa ter coragem.</p>
+    <p>Não decepcione o capitão!</p>
+</aside>
 
-        <h3>🌸 Yachiru</h3>
-        <p>Hehehe! Será que você consegue acompanhar o Ken-chan?</p>
-    </aside>
+<main>
+    <h2>Inscrição para Ceifeiro</h2>
+    <p>Preencha as informações para demonstrar seu interesse em fazer parte de uma divisão.</p>
 
-    <main>
-        <section>
-            <h2>Recrutamento de Shinigamis</h2>
-            <p>Preencha o formulário para demonstrar seu interesse em fazer parte do Gotei 13.</p>
+    <form>
+        <fieldset>
+            <legend>Ficha de inscrição</legend>
 
-            <form>
-                <fieldset>
-                    <legend>Ficha de recrutamento</legend>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-                    <label for="nome">Nome do candidato:</label>
-                    <input type="text" id="nome" name="nome" required>
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" min="1" required>
 
-                    <label for="idade">Idade:</label>
-                    <input type="number" id="idade" name="idade" min="1">
+            <label for="divisao">Divisão desejada:</label>
+            <select id="divisao" name="divisao">
+                <option>11ª Divisão</option>
+                <option>Outra divisão</option>
+            </select>
 
-                    <label for="divisao">Divisão desejada:</label>
-                    <select id="divisao" name="divisao">
-                        <option value="11">11ª Divisão</option>
-                        <option value="6">6ª Divisão</option>
-                        <option value="10">10ª Divisão</option>
-                        <option value="4">4ª Divisão</option>
-                        <option value="outra">Outra divisão</option>
-                    </select>
+            <label for="habilidade">Principal habilidade:</label>
+            <input type="text" id="habilidade" name="habilidade">
 
-                    <label for="habilidade">Principal habilidade:</label>
-                    <input type="text" id="habilidade" name="habilidade">
+            <label for="zanpakuto">Nome da sua Zanpakutō:</label>
+            <input type="text" id="zanpakuto" name="zanpakuto">
 
-                    <label for="zanpakuto">Nome da sua Zanpakutō:</label>
-                    <input type="text" id="zanpakuto" name="zanpakuto">
+            <p>Você se considera corajoso?</p>
+            <label><input type="radio" name="coragem" value="sim"> Sim</label>
+            <label><input type="radio" name="coragem" value="nao"> Não</label>
 
-                    <p>Você tem coragem para enfrentar adversários fortes?</p>
-                    <label><input type="radio" name="coragem" value="sim"> Sim</label>
-                    <label><input type="radio" name="coragem" value="nao"> Não</label>
+            <label for="motivacao">Por que deseja entrar?</label>
+            <textarea id="motivacao" name="motivacao" rows="5"></textarea>
 
-                    <label for="motivacao">Por que deseja ser um Shinigami?</label>
-                    <textarea id="motivacao" name="motivacao" rows="4"></textarea>
+            <input type="submit" value="Enviar inscrição">
+            <input type="reset" value="Limpar">
+        </fieldset>
+    </form>
 
-                    <input type="submit" value="Enviar candidatura">
-                    <input type="reset" value="Limpar">
-                </fieldset>
-            </form>
-        </section>
-    </main>
+    <section>
+        <h2>Uma mensagem de Yachiru</h2>
+        <p>Hehehe! Boa sorte! Talvez você consiga lutar ao lado do Ken-chan!</p>
+    </section>
+</main>
 
 </div>
 
 <footer>
-    <p>Recrutamento fictício inspirado no universo de Bleach.</p>
-    <p><a href="index.html">Voltar para o início</a></p>
+    <p>Seja um Ceifeiro — Soul Society.</p>
 </footer>
 
 </body>
