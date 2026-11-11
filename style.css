@@ -16,6 +16,8 @@ body {
     background-color: #100d10;
 }
 
+/* CABEÇALHO */
+
 header {
     padding: 30px 15px;
     text-align: center;
@@ -35,6 +37,8 @@ header h1 {
 header p {
     color: #ffb5c6;
 }
+
+/* MENU */
 
 nav {
     display: flex;
@@ -178,7 +182,7 @@ article {
     margin-bottom: 20px;
 }
 
-/* IMAGENS */
+/* IMAGENS GERAIS */
 
 img {
     display: block;
@@ -221,7 +225,7 @@ figcaption {
     flex: 1 1 220px;
 }
 
-/* GALERIA PESSOAS FAVORITAS */
+/* GALERIA DE FAVORITOS */
 
 .galeria-favoritos {
     display: flex;
@@ -230,6 +234,7 @@ figcaption {
     justify-content: center;
     gap: 25px;
     margin: 30px 0;
+    overflow: visible;
 }
 
 .galeria-favoritos h2 {
@@ -243,22 +248,85 @@ figcaption {
     display: none;
 }
 
+/* GRUPO DE IMAGENS */
+
 .grupo-imagens {
-    flex: 0 1 300px;
-    min-height: 320px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    isolation: isolate;
+    flex: 0 1 340px;
+    width: 340px;
+    height: 350px;
+    min-height: 350px;
+    display: block;
+    overflow: visible;
 }
+
+/* POSIÇÃO DAS CARTAS */
 
 .grupo-imagens label {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 210px;
+    height: 260px;
     cursor: pointer;
+    transition: transform 0.3s ease;
 }
 
+/* CAMADAS */
+
+.grupo-imagens label:nth-child(1) {
+    --i: 0;
+    z-index: 1;
+}
+
+.grupo-imagens label:nth-child(2) {
+    --i: 1;
+    z-index: 2;
+}
+
+.grupo-imagens label:nth-child(3) {
+    --i: 2;
+    z-index: 3;
+}
+
+.grupo-imagens label:nth-child(4) {
+    --i: 3;
+    z-index: 4;
+}
+
+.grupo-imagens label:nth-child(5) {
+    --i: 4;
+    z-index: 5;
+}
+
+.grupo-imagens label:nth-child(6) {
+    --i: 5;
+    z-index: 6;
+}
+
+.grupo-imagens label:nth-child(7) {
+    --i: 6;
+    z-index: 7;
+}
+
+/* EFEITO CASCATA */
+
+.grupo-imagens label {
+    transform: translate(
+        calc(var(--i) * 20px),
+        calc(var(--i) * 14px)
+    );
+}
+
+/* APARÊNCIA DAS CARTAS */
+
 .grupo-imagens img {
-    width: 250px;
-    height: 300px;
+    display: block;
+    width: 210px;
+    height: 260px;
+    max-width: none;
     object-fit: cover;
     padding: 5px;
     background-color: #292127;
@@ -266,16 +334,14 @@ figcaption {
     box-shadow: 0 5px 15px #00000090;
 }
 
-/* CADA CLIQUE MOSTRA A PRÓXIMA IMAGEM */
+/* DESTAQUE AO PASSAR O MOUSE */
 
-#etapa0:checked ~ .grupo-imagens .imagem1,
-#etapa1:checked ~ .grupo-imagens .imagem2,
-#etapa2:checked ~ .grupo-imagens .imagem3,
-#etapa3:checked ~ .grupo-imagens .imagem4,
-#etapa4:checked ~ .grupo-imagens .imagem5,
-#etapa5:checked ~ .grupo-imagens .imagem6,
-#etapa6:checked ~ .grupo-imagens .imagem7 {
-    display: block;
+.grupo-imagens label:hover {
+    transform: translate(
+        calc(var(--i) * 20px),
+        calc(var(--i) * 14px - 8px)
+    ) scale(1.03);
+    z-index: 20;
 }
 
 /* TABELAS */
@@ -338,6 +404,10 @@ label {
     margin-bottom: 5px;
     color: #f0dce5;
     font-weight: bold;
+}
+
+.grupo-imagens label {
+    margin: 0;
 }
 
 input:not([type="radio"]):not([type="checkbox"]):not([type="submit"]):not([type="reset"]),
@@ -454,11 +524,22 @@ footer p {
     }
 
     .galeria-favoritos {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .galeria-favoritos h2 {
+        width: 100%;
+        flex: none;
     }
 
     .grupo-imagens {
-        min-height: 320px;
+        width: 100%;
+        max-width: 340px;
+        flex: none;
+        min-height: 350px;
     }
 
     th,
@@ -470,50 +551,4 @@ footer p {
     fieldset {
         padding: 12px;
     }
-}
-
-/* EFEITO DE BARALHO NA GALERIA */
-
-.grupo-imagens {
-    position: relative;
-    isolation: isolate;
-    overflow: visible;
-}
-
-.grupo-imagens::before,
-.grupo-imagens::after {
-    content: "";
-    position: absolute;
-    width: 230px;
-    height: 280px;
-    background-color: #292127;
-    border: 3px solid #a80027;
-    box-shadow: 0 5px 15px #00000090;
-    pointer-events: none;
-}
-
-.grupo-imagens::before {
-    transform: rotate(-9deg) translate(-8px, 3px);
-    z-index: -2;
-}
-
-.grupo-imagens::after {
-    transform: rotate(8deg) translate(8px, 2px);
-    border-color: #f05a94;
-    z-index: -1;
-}
-
-.grupo-imagens label {
-    position: relative;
-    z-index: 1;
-}
-
-.grupo-imagens img {
-    position: relative;
-    transform: rotate(0deg);
-    transition: transform 0.3s;
-}
-
-.grupo-imagens label:hover img {
-    transform: scale(1.04) rotate(1deg);
 }
