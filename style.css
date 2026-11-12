@@ -242,7 +242,7 @@ figcaption {
     border-bottom: none;
 }
 
-/* ESCONDER OS RADIOS */
+/* CONTROLES */
 
 .controle-galeria {
     position: absolute;
@@ -274,10 +274,11 @@ figcaption {
     height: 260px;
     margin: 0;
     cursor: pointer;
+    pointer-events: none;
     transition: transform 0.3s ease;
 }
 
-/* ORDEM DAS CAMADAS */
+/* CAMADAS */
 
 .imagem1 { --i: 0; z-index: 1; }
 .imagem2 { --i: 1; z-index: 2; }
@@ -296,7 +297,7 @@ figcaption {
     );
 }
 
-/* APARÊNCIA DAS IMAGENS */
+/* APARÊNCIA */
 
 .grupo-imagens img {
     display: block;
@@ -310,17 +311,14 @@ figcaption {
     box-shadow: 0 5px 15px #00000090;
 }
 
-/* SOMENTE A PRIMEIRA CARTA VISÍVEL RECEBE CLIQUES */
+/* PRIMEIRA IMAGEM CLICÁVEL */
 
-.grupo-imagens label {
-    pointer-events: none;
+#etapa0:checked ~ .grupo-imagens .imagem7,
+#etapa7:checked ~ .grupo-imagens .imagem7 {
+    pointer-events: auto;
 }
 
-.imagem7 {
-    pointer-events: auto !important;
-}
-
-/* PASSAR O MOUSE */
+/* EFEITO AO PASSAR O MOUSE */
 
 .grupo-imagens label:hover {
     transform: translate(
@@ -329,7 +327,7 @@ figcaption {
     ) scale(1.03);
 }
 
-/* ETAPA 1: ESCONDER IMAGEM 7 */
+/* ETAPA 1 */
 
 #etapa1:checked ~ .grupo-imagens .imagem7 {
     display: none;
@@ -339,7 +337,7 @@ figcaption {
     pointer-events: auto;
 }
 
-/* ETAPA 2: ESCONDER IMAGENS 7 E 6 */
+/* ETAPA 2 */
 
 #etapa2:checked ~ .grupo-imagens .imagem7,
 #etapa2:checked ~ .grupo-imagens .imagem6 {
@@ -389,7 +387,7 @@ figcaption {
     pointer-events: auto;
 }
 
-/* ETAPA 6: SOBROU UMA IMAGEM */
+/* ETAPA 6 */
 
 #etapa6:checked ~ .grupo-imagens .imagem7,
 #etapa6:checked ~ .grupo-imagens .imagem6,
@@ -404,14 +402,19 @@ figcaption {
     pointer-events: auto;
 }
 
-/* ETAPA 7: TODAS VOLTAM */
+/* ETAPA 7: TODAS REAPARECEM */
 
 #etapa7:checked ~ .grupo-imagens label {
     display: block;
 }
 
-#etapa7:checked ~ .grupo-imagens .imagem7 {
-    pointer-events: auto;
+#etapa7:checked ~ .grupo-imagens .imagem1,
+#etapa7:checked ~ .grupo-imagens .imagem2,
+#etapa7:checked ~ .grupo-imagens .imagem3,
+#etapa7:checked ~ .grupo-imagens .imagem4,
+#etapa7:checked ~ .grupo-imagens .imagem5,
+#etapa7:checked ~ .grupo-imagens .imagem6 {
+    pointer-events: none;
 }
 
 /* TABELAS */
