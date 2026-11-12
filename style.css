@@ -112,7 +112,7 @@ nav a:hover,
     display: block;
 }
 
-/* LAYOUT PRINCIPAL */
+/* LAYOUT */
 
 .layout {
     display: grid;
@@ -145,7 +145,7 @@ aside h3 {
     padding-bottom: 8px;
 }
 
-/* CONTEÚDO PRINCIPAL */
+/* CONTEÚDO */
 
 main {
     grid-column: 2;
@@ -208,7 +208,7 @@ figcaption {
     text-align: center;
 }
 
-/* DESTAQUE DE ZARAKI */
+/* DESTAQUE ZARAKI */
 
 .zaraki-destaque {
     display: flex;
@@ -225,7 +225,7 @@ figcaption {
     flex: 1 1 220px;
 }
 
-/* GALERIA DE FAVORITOS */
+/* GALERIA */
 
 .galeria-favoritos {
     display: flex;
@@ -242,26 +242,28 @@ figcaption {
     border-bottom: none;
 }
 
-/* CONTROLES DA GALERIA */
+/* ESCONDER OS RADIOS */
 
 .controle-galeria {
-    display: none;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
 }
 
-/* GRUPO DE IMAGENS */
+/* ÁREA DAS IMAGENS */
 
 .grupo-imagens {
     position: relative;
     isolation: isolate;
     flex: 0 1 340px;
     width: 340px;
-    height: 350px;
-    min-height: 350px;
+    height: 370px;
+    min-height: 370px;
     display: block;
     overflow: visible;
 }
 
-/* POSIÇÃO DAS CARTAS */
+/* CARTAS */
 
 .grupo-imagens label {
     position: absolute;
@@ -270,48 +272,22 @@ figcaption {
     display: block;
     width: 210px;
     height: 260px;
+    margin: 0;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
 
-/* CAMADAS */
+/* ORDEM DAS CAMADAS */
 
-.grupo-imagens label:nth-child(1) {
-    --i: 0;
-    z-index: 1;
-}
+.imagem1 { --i: 0; z-index: 1; }
+.imagem2 { --i: 1; z-index: 2; }
+.imagem3 { --i: 2; z-index: 3; }
+.imagem4 { --i: 3; z-index: 4; }
+.imagem5 { --i: 4; z-index: 5; }
+.imagem6 { --i: 5; z-index: 6; }
+.imagem7 { --i: 6; z-index: 7; }
 
-.grupo-imagens label:nth-child(2) {
-    --i: 1;
-    z-index: 2;
-}
-
-.grupo-imagens label:nth-child(3) {
-    --i: 2;
-    z-index: 3;
-}
-
-.grupo-imagens label:nth-child(4) {
-    --i: 3;
-    z-index: 4;
-}
-
-.grupo-imagens label:nth-child(5) {
-    --i: 4;
-    z-index: 5;
-}
-
-.grupo-imagens label:nth-child(6) {
-    --i: 5;
-    z-index: 6;
-}
-
-.grupo-imagens label:nth-child(7) {
-    --i: 6;
-    z-index: 7;
-}
-
-/* EFEITO CASCATA */
+/* POSIÇÃO EM CASCATA */
 
 .grupo-imagens label {
     transform: translate(
@@ -320,7 +296,7 @@ figcaption {
     );
 }
 
-/* APARÊNCIA DAS CARTAS */
+/* APARÊNCIA DAS IMAGENS */
 
 .grupo-imagens img {
     display: block;
@@ -334,14 +310,108 @@ figcaption {
     box-shadow: 0 5px 15px #00000090;
 }
 
-/* DESTAQUE AO PASSAR O MOUSE */
+/* SOMENTE A PRIMEIRA CARTA VISÍVEL RECEBE CLIQUES */
+
+.grupo-imagens label {
+    pointer-events: none;
+}
+
+.imagem7 {
+    pointer-events: auto !important;
+}
+
+/* PASSAR O MOUSE */
 
 .grupo-imagens label:hover {
     transform: translate(
         calc(var(--i) * 20px),
         calc(var(--i) * 14px - 8px)
     ) scale(1.03);
-    z-index: 20;
+}
+
+/* ETAPA 1: ESCONDER IMAGEM 7 */
+
+#etapa1:checked ~ .grupo-imagens .imagem7 {
+    display: none;
+}
+
+#etapa1:checked ~ .grupo-imagens .imagem6 {
+    pointer-events: auto;
+}
+
+/* ETAPA 2: ESCONDER IMAGENS 7 E 6 */
+
+#etapa2:checked ~ .grupo-imagens .imagem7,
+#etapa2:checked ~ .grupo-imagens .imagem6 {
+    display: none;
+}
+
+#etapa2:checked ~ .grupo-imagens .imagem5 {
+    pointer-events: auto;
+}
+
+/* ETAPA 3 */
+
+#etapa3:checked ~ .grupo-imagens .imagem7,
+#etapa3:checked ~ .grupo-imagens .imagem6,
+#etapa3:checked ~ .grupo-imagens .imagem5 {
+    display: none;
+}
+
+#etapa3:checked ~ .grupo-imagens .imagem4 {
+    pointer-events: auto;
+}
+
+/* ETAPA 4 */
+
+#etapa4:checked ~ .grupo-imagens .imagem7,
+#etapa4:checked ~ .grupo-imagens .imagem6,
+#etapa4:checked ~ .grupo-imagens .imagem5,
+#etapa4:checked ~ .grupo-imagens .imagem4 {
+    display: none;
+}
+
+#etapa4:checked ~ .grupo-imagens .imagem3 {
+    pointer-events: auto;
+}
+
+/* ETAPA 5 */
+
+#etapa5:checked ~ .grupo-imagens .imagem7,
+#etapa5:checked ~ .grupo-imagens .imagem6,
+#etapa5:checked ~ .grupo-imagens .imagem5,
+#etapa5:checked ~ .grupo-imagens .imagem4,
+#etapa5:checked ~ .grupo-imagens .imagem3 {
+    display: none;
+}
+
+#etapa5:checked ~ .grupo-imagens .imagem2 {
+    pointer-events: auto;
+}
+
+/* ETAPA 6: SOBROU UMA IMAGEM */
+
+#etapa6:checked ~ .grupo-imagens .imagem7,
+#etapa6:checked ~ .grupo-imagens .imagem6,
+#etapa6:checked ~ .grupo-imagens .imagem5,
+#etapa6:checked ~ .grupo-imagens .imagem4,
+#etapa6:checked ~ .grupo-imagens .imagem3,
+#etapa6:checked ~ .grupo-imagens .imagem2 {
+    display: none;
+}
+
+#etapa6:checked ~ .grupo-imagens .imagem1 {
+    pointer-events: auto;
+}
+
+/* ETAPA 7: TODAS VOLTAM */
+
+#etapa7:checked ~ .grupo-imagens label {
+    display: block;
+}
+
+#etapa7:checked ~ .grupo-imagens .imagem7 {
+    pointer-events: auto;
 }
 
 /* TABELAS */
@@ -539,7 +609,7 @@ footer p {
         width: 100%;
         max-width: 340px;
         flex: none;
-        min-height: 350px;
+        min-height: 370px;
     }
 
     th,
